@@ -1,0 +1,47 @@
+:root{
+    --primary-color: #6217BA;
+    --primary-text-color-dark: #47355E;
+    --primary-bg-color: #6217BA;
+    --secondary-color: #ffffff;
+    --secondary-bg-color: #A259FF;
+    --header-text-color: #3F3356;
+    --p-text-color: rgba(71, 53, 94, 0.8);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.checker{
+    border: 1.5px var(--primary-bg-color) solid;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (min-width: 765px){
+    .navheader{
+        background: var(--primary-bg-color);
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+    }
+    .container{
+        margin: 0 4rem !important;
+    }
+    
+    .navbar{
+        padding: 2em 0;
+    }
+}
+
+@media (max-width: 426px){
+    .container{
+        margin: 0 1rem !important;
+    }
+}
