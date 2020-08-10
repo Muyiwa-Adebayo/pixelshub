@@ -19,29 +19,134 @@
     border: 1.5px var(--primary-bg-color) solid;
 }
 
-body{
+html, body{
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
-@media (min-width: 765px){
-    .navheader{
-        background: var(--primary-bg-color);
+
+header{
+    background-color: var(--primary-bg-color);
+    padding-bottom: 4rem;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    background-image: url('../img/Ellipse\ 16.svg'),
+    url('../img/Ellipse\ 18.svg');
+    background-repeat: no-repeat no-repeat;
+    background-position: 90% 10%, 60% 90%;
+    background-size: 90px, 300px;
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    margin: 0 2%;
+}
+
+.hero-section{
+    margin: 2% 5.5%;
+    
+}
+
+.hero-section .title-text{
+    padding: 1rem 0;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 72px;
+    color: var(--secondary-color);
+}
+
+.hero-section p{
+    max-width: 446px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--secondary-color);
+}
+
+.hero-section a{
+    width: 247px;
+    padding: 1rem 2rem;
+    border: 1.5px solid var(--secondary-bg-color);
+    border-radius: 8px;
+}
+
+.hero-section .hero-image img{
+    position: absolute;
+    width: 32%;
+    left: 50%;
+    top: 10%;
+    transform: rotate(30.32deg);
+}
+
+/* SMALL DESKTOP */
+@media (max-width: 1145px) and (min-width: 992px){
+    header::before{
+        content: '';
+        position: absolute;
+        background-image: url('../img/Ellipse\ 16.svg'),
+        url('../img/Ellipse\ 18.svg');
+        background-repeat: no-repeat no-repeat;
+        background-position: 90% 10%, 60% 90%;
+        background-size: 90px, 300px;
         width: 100%;
         height: 100%;
-        border-bottom-left-radius: 10%;
-        border-bottom-right-radius: 10%;
     }
-    .container{
-        margin: 0 4rem !important;
+    .hero-section .hero-image img{
+        position: absolute;
+        width: 32%;
+        left: 55%;
+        top: 25%;
+        transform: rotate(30.32deg);
+    }
+} 
+
+@media (max-width: 991.98px){
+    .hero-section{
+        margin: 30% 5.5%;
+    }    
+ 
+    .hero-section .title-text{
+        padding: 1rem 0;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 42px;
+        color: var(--secondary-color);
     }
     
-    .navbar{
-        padding: 2em 0;
+    .hero-section p{
+        max-width: 446px;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--secondary-color);
+    }
+    
+    .hero-section a{
+        width: 247px;
+        padding: 1rem 2rem;
+        border: 1.5px solid var(--secondary-bg-color);
+        border-radius: 8px;
+    }
+
+    .hero-section .hero-image img{
+        display: none;
+        position: absolute;
+        width: 30%;
+        left: 50%;
+        top: 0%;
+        transform: rotate(30.32deg);
     }
 }
 
-@media (max-width: 426px){
-    .container{
-        margin: 0 1rem !important;
+@media (max-width: 576px){
+    .hero-section .hero-image img{
+        display: none;
+        position: absolute;
+        width: 40%;
+        left: 35%;
+        top: 4%;
+        transform: rotate(30.32deg);
     }
 }
